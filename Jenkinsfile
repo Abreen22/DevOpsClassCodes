@@ -1,7 +1,7 @@
 
 pipeline{
     tools{
-        jdk 'myjava'
+        jdk 'MyJava'
         maven 'myMaven'
     }
     agent none
@@ -26,7 +26,7 @@ pipeline{
                   sh 'mvn pmd:pmd'
               }
           }
-           stage('UnitTest'){
+           stage('testJob'){
                agent any
               steps{
                   sh 'mvn test'
